@@ -426,7 +426,7 @@ There are 3 frames total (including the Global frame). In addition, consider the
 2. What name is frame `f2` labeled with (`add_ten` or λ)? Which frame is the parent of `f2`?
 3. What value is the variable `result` bound to in the Global frame?
 
-You can try out the environment diagram at [tutor.cs61a.org](http://tutor.cs61a.org/). To see the environment diagram for this question, click [here](https://goo.gl/axdNj5).
+You can try out the environment diagram at [python tutor](https://pythontutor.com/composingprograms.html#mode=edit). To see the environment diagram for this question, click [here](https://pythontutor.com/composingprograms.html#code=n%20%3D%209%0Adef%20make_adder%28n%29%3A%0A%20%20%20%20return%20lambda%20k%3A%20k%20%2B%20n%0Aadd_ten%20%3D%20make_adder%28n%2B1%29%0Aresult%20%3D%20add_ten%28n%29&cumulative=true&curInstr=0&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D).
 
 1. The intrinsic name of the function object that `add_ten` points to is λ (specifically, the lambda whose parameter is `k`). The parent frame of this lambda is `f1`.
 2. `f2` is labeled with the name λ the parent frame of `f2` is `f1`, since that is where λ is defined.
@@ -551,3 +551,8 @@ python3 ok -q cycle --local
 
 
 
+In the end, you can use doctest module to run all your doctest.
+
+```shell
+python3 -m doctest lab02.py
+```
